@@ -1,6 +1,6 @@
 {
   "name": "@projectwallace/preset-oxlint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Opinionated preset for Oxlint",
   "main": "index.json",
   "scripts": {},
