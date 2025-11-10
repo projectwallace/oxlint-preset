@@ -1,0 +1,104 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"plugins": [
+		"import",
+		"typescript",
+		"oxc",
+		"unicorn",
+		"vitest"
+	],
+	"env": {
+		"es2024": true
+	},
+	"categories": {
+		"perf": "error",
+		"correctness": "error",
+		"pedantic": "error"
+	},
+	"rules": {
+		// ============================================================
+		// Core/ESLint rules
+		// ============================================================
+		// Allow using any TypeScript types without restrictions
+		"ban-types": "off",
+		// Switch statements don't require a default case
+		"default-case": "off",
+		// Functions don't require explicit return type annotations
+		"explicit-function-return-type": "off",
+		// No limit on the number of classes per file
+		"max-classes-per-file": "off",
+		// Warn when nesting exceeds 5 levels to maintain readability
+		"max-depth": [
+			"warn",
+			{
+				"max": 5
+			}
+		],
+		// No limit on the number of import/require statements per file
+		"max-dependencies": "off",
+		// No limit on file length
+		"max-lines": "off",
+		// No limit on function length
+		"max-lines-per-function": "off",
+		// Allow using async/await syntax
+		"no-async-await": "off",
+		// Allow await inside loops
+		"no-await-in-loop": "off",
+		// Allow bitwise operators (&, |, ^, ~, <<, >>, >>>)
+		"no-bitwise": "off",
+		// Allow CommonJS require/module.exports
+		"no-commonjs": "off",
+		// Allow console statements
+		"no-console": "warn",
+		// Allow default exports
+		"no-default-export": "off",
+		// Warn about disabled tests to prevent them from being forgotten
+		"no-disabled-tests": "warn",
+		// Allow if statements without else after an else block
+		"no-lonely-if": "off",
+		// Allow TypeScript non-null assertions (!)
+		"no-non-null-assertion": "off",
+		// Allow optional chaining (?.)
+		"no-optional-chaining": "off",
+		// Allow unary ++ and -- operators
+		"no-plusplus": "off",
+		// Allow rest/spread syntax (...obj, { ...rest })
+		"no-rest-spread-properties": "off",
+		// Allow using undefined as a value
+		"no-undefined": "off",
+		// Allow unused variables (handled by TypeScript)
+		"no-unused-vars": "off",
+		// Allow explicit return of undefined
+		"no-useless-undefined": "off",
+		// Don't enforce String.codePointAt over String.charCodeAt
+		"prefer-code-point": "off",
+		// Don't enforce Math.trunc over bitwise operations
+		"prefer-math-trunc": "off",
+		// Don't enforce querySelector over getElementById
+		"prefer-query-selector": "off",
+		// Don't enforce String.slice over String.substr/substring
+		"prefer-string-slice": "off",
+		// Warn about async functions that don't use await
+		"require-await": "warn",
+
+		// ============================================================
+		// Unicorn plugin rules
+		// ============================================================
+		// Prefer using `undefined` over `null` for consistency
+		"unicorn/no-null": "error",
+		// Don't enforce Set.has() over Array.includes()
+		"unicorn/prefer-set-has": "off",
+
+		// ============================================================
+		// Vitest plugin rules
+		// ============================================================
+		// Always use `test()` instead of `it()` for consistency
+		"vitest/consistent-test-it": [
+			"error",
+			{
+        "fn": "test",
+        "withinDescribe": "test"
+      }
+		]
+	}
+}

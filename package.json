@@ -1,0 +1,20 @@
+{
+  "name": "@projectwallace/preset-oxlint",
+  "version": "0.0.1",
+  "description": "Opinionated preset for Oxlint",
+  "main": "index.json",
+  "scripts": {},
+  "keywords": [
+    "oxlint",
+    "preset"
+  ],
+  "author": "Bart Veneman",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "index.json"
+  ],
+  "peerDependencies": {
+    "oxlint": "^1.0.0"
+  }
+}
