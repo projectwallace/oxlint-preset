@@ -1,10 +1,10 @@
 {
   "name": "@projectwallace/preset-oxlint",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Opinionated Project Wallace preset for Oxlint",
   "repository": {
-    "type": "https",
-    "url": "https://github.com/projectwallace/preset-oxlint"
+    "type": "git",
+    "url": "git+https://github.com/projectwallace/preset-oxlint.git"
   },
   "homepage": "https://github.com/projectwallace/preset-oxlint",
   "issues": "https://github.com/projectwallace/preset-oxlint/issues",
