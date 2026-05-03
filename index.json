@@ -5,8 +5,7 @@
 		"typescript",
 		"oxc",
 		"unicorn",
-		"vitest",
-		"jest"
+		"vitest"
 	],
 	"env": {
 		"es2024": true
@@ -20,6 +19,8 @@
 		// ============================================================
 		// Core/ESLint rules
 		// ============================================================
+		// Inline comments are actually useful
+		"no-inline-comments": "off",
 		// Allow using any TypeScript types without restrictions
 		"ban-types": "off",
 		// Switch statements don't require a default case
@@ -83,24 +84,31 @@
 		"require-await": "warn",
 
 		// ============================================================
+		// Eslint plugin rules
+		// ============================================================
+		// Allow inline comments, we use them tons
+		"no-inline-comments": "off",
+
+		// ============================================================
 		// Unicorn plugin rules
 		// ============================================================
 		// Prefer using `undefined` over `null` for consistency
 		"unicorn/no-null": "error",
 		// Don't enforce Set.has() over Array.includes()
 		"unicorn/prefer-set-has": "off",
+		// Allow lonely if for readability (prevent long if-statements)
+		"unicorn/no-lonely-if": "off",
 
 		// ============================================================
 		// Vitest plugin rules
 		// ============================================================
 		// Always use `test()` instead of `it()` for consistency
-		// Uses 'jest' because they use the same logic, apparently
-		"jest/consistent-test-it": [
+		"vitest/consistent-test-it": [
 			"error",
 			{
-        "fn": "test",
-        "withinDescribe": "test"
-      }
+        		"fn": "test",
+        		"withinDescribe": "test"
+      		}
 		]
 	}
 }
