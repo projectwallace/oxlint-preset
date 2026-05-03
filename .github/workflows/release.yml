@@ -27,5 +27,4 @@ jobs:
           git add package.json package-lock.json
           git commit -m "chore: bump version to ${{ github.event.release.tag_name }}"
           git push origin HEAD:main
-      - run: npm run build
       - run: npm publish --access public
