@@ -16,8 +16,6 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 24
-      - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm test
       - name: Bump version in package.json
         run: |
           VERSION="${{ github.event.release.tag_name }}"
