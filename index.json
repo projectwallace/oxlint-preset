@@ -88,6 +88,7 @@
 		// ============================================================
 		// Allow inline comments, we use them tons
 		"no-inline-comments": "off",
+		"require-unicode-regexp": "off",
 
 		// ============================================================
 		// Unicorn plugin rules
